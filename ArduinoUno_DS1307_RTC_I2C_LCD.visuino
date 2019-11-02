@@ -1,0 +1,439 @@
+{
+  "Version": "2",
+  "Product": "Visuino - Visual Arduino Programming",
+  "Units": [
+    {
+      "Type": "Diagram",
+      "Name": "__OpenWireRootUnit__",
+      "*": [
+        {
+          "X": 912,
+          "Name": "Arduino",
+          "Instance": {
+            "AnalogInput": {
+              "*": [
+                {
+                  "+": "TArduinoAnalogOptionalAsDigitalInputChannel"
+                },
+                {
+                  "+": "TArduinoAnalogOptionalAsDigitalInputChannel"
+                }
+              ]
+            },
+            "Serial": {
+              "*": [
+                {
+                  "+": "TArduinoHardwareSerial"
+                }
+              ]
+            },
+            "+": "TArduinoBoard",
+            "AnalogInputReference": "Default",
+            "Modules": {
+              "*": [
+                {
+                  "+": "TArduinoEEPROMModule"
+                },
+                {
+                  "+": "TArduinoProcessorModule"
+                },
+                {
+                  "+": "TArduinoWatchdogTimerModule"
+                }
+              ]
+            },
+            "I2CChannels": {
+              "*": [
+                {
+                  "InputPin": {
+                    "SourcePins": [
+                      {
+                        "ID": "__OpenWireRootUnit__.LiquidCrystalDisplay1.OutputPin"
+                      },
+                      {
+                        "ID": "__OpenWireRootUnit__.RealTimeClock1.ControlOutputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoI2C"
+                }
+              ]
+            },
+            "Digital": {
+              "*": [
+                {
+                  "+": "TArduinoAdditionalDigitalSerial0Channel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalSerial0Channel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalInterruptChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalPWMInterruptChannel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalPWMChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalPWMChannel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalChannel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalPWMChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalPWMChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalPWMSPI0Channel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalSPI0Channel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalSPI0Channel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalI2C0Channel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalI2C0Channel"
+                }
+              ]
+            },
+            "SPIChannels": {
+              "*": [
+                {
+                  "+": "TArduinoSPI"
+                }
+              ]
+            },
+            "BoardType": "Arduino Nano"
+          },
+          "Type": "Component",
+          "Y": 256
+        },
+        {
+          "X": 672,
+          "Name": "LiquidCrystalDisplay1",
+          "Instance": {
+            "Elements": {
+              "*": [
+                {
+                  "InitialValue": "  -   -",
+                  "Name": "TextField1",
+                  "+": "TArduinoLiquidCrystalElementTextField"
+                },
+                {
+                  "AllignLeft": false,
+                  "InputPin": {
+                    "SourcePin": {
+                      "Name": "__OpenWireRootUnit__.DecodeDateTime1.OutputPins.Day",
+                      "ID": "__OpenWireRootUnit__.DecodeDateTime1.OutputPins._Pin2"
+                    }
+                  },
+                  "+": "TArduinoLiquidCrystalElementIntegerField",
+                  "FillCharacter": "0",
+                  "Name": "IntegerField1",
+                  "Width": 2
+                },
+                {
+                  "Name": "TextField2",
+                  "InputPin": {
+                    "SourcePins": [
+                      {
+                        "ID": "__OpenWireRootUnit__.Array1.OutputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoLiquidCrystalElementTextField",
+                  "Column": 3,
+                  "Width": 3
+                },
+                {
+                  "InputPin": {
+                    "SourcePin": {
+                      "Name": "__OpenWireRootUnit__.DecodeDateTime1.OutputPins.Year",
+                      "ID": "__OpenWireRootUnit__.DecodeDateTime1.OutputPins._Pin0"
+                    }
+                  },
+                  "FillCharacter": "0",
+                  "+": "TArduinoLiquidCrystalElementIntegerField",
+                  "Column": 7,
+                  "AllignLeft": false,
+                  "Name": "IntegerField2",
+                  "Width": 4
+                },
+                {
+                  "Row": 1,
+                  "Name": "TextField3",
+                  "+": "TArduinoLiquidCrystalElementTextField",
+                  "InitialValue": "  :  :"
+                },
+                {
+                  "Row": 1,
+                  "InputPin": {
+                    "SourcePin": {
+                      "Name": "__OpenWireRootUnit__.DecodeDateTime1.OutputPins.Hour",
+                      "ID": "__OpenWireRootUnit__.DecodeDateTime1.OutputPins._Pin3"
+                    }
+                  },
+                  "+": "TArduinoLiquidCrystalElementIntegerField",
+                  "FillCharacter": "0",
+                  "AllignLeft": false,
+                  "Name": "IntegerField3",
+                  "Width": 2
+                },
+                {
+                  "Row": 1,
+                  "InputPin": {
+                    "SourcePin": {
+                      "Name": "__OpenWireRootUnit__.DecodeDateTime1.OutputPins.Minute",
+                      "ID": "__OpenWireRootUnit__.DecodeDateTime1.OutputPins._Pin4"
+                    }
+                  },
+                  "+": "TArduinoLiquidCrystalElementIntegerField",
+                  "FillCharacter": "0",
+                  "Column": 3,
+                  "AllignLeft": false,
+                  "Name": "IntegerField4",
+                  "Width": 2
+                },
+                {
+                  "Row": 1,
+                  "InputPin": {
+                    "SourcePin": {
+                      "Name": "__OpenWireRootUnit__.DecodeDateTime1.OutputPins.Second",
+                      "ID": "__OpenWireRootUnit__.DecodeDateTime1.OutputPins._Pin5"
+                    }
+                  },
+                  "+": "TArduinoLiquidCrystalElementIntegerField",
+                  "FillCharacter": "0",
+                  "Column": 6,
+                  "AllignLeft": false,
+                  "Name": "IntegerField5",
+                  "Width": 2
+                }
+              ]
+            },
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.Arduino.I2CChannels.I2C.InputPin",
+                  "ID": "__OpenWireRootUnit__.Arduino.I2CChannels._Item0.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoLiquidCrystalDisplayI2C"
+          },
+          "Type": "Component",
+          "Y": 320
+        },
+        {
+          "X": 256,
+          "Name": "RealTimeClock1",
+          "Instance": {
+            "ControlOutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.Arduino.I2CChannels.I2C.InputPin",
+                  "ID": "__OpenWireRootUnit__.Arduino.I2CChannels._Item0.InputPin"
+                }
+              ]
+            },
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.DecodeDateTime1.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoRTCDS1307"
+          },
+          "Type": "Component",
+          "Y": 464
+        },
+        {
+          "X": 432,
+          "Name": "DecodeDateTime1",
+          "Instance": {
+            "OutputPins": {
+              "Pins": [
+                {
+                  "Type": "ptSource",
+                  "SinkPins": [
+                    {
+                      "Name": "__OpenWireRootUnit__.LiquidCrystalDisplay1.Elements.IntegerField2.InputPin",
+                      "ID": "__OpenWireRootUnit__.LiquidCrystalDisplay1.Elements._Item3.InputPin"
+                    }
+                  ]
+                },
+                {
+                  "Type": "ptSource",
+                  "SinkPins": [
+                    {
+                      "ID": "__OpenWireRootUnit__.Array1.IndexInputPin"
+                    }
+                  ]
+                },
+                {
+                  "Type": "ptSource",
+                  "SinkPins": [
+                    {
+                      "Name": "__OpenWireRootUnit__.LiquidCrystalDisplay1.Elements.IntegerField1.InputPin",
+                      "ID": "__OpenWireRootUnit__.LiquidCrystalDisplay1.Elements._Item1.InputPin"
+                    }
+                  ]
+                },
+                {
+                  "Type": "ptSource",
+                  "SinkPins": [
+                    {
+                      "Name": "__OpenWireRootUnit__.LiquidCrystalDisplay1.Elements.IntegerField3.InputPin",
+                      "ID": "__OpenWireRootUnit__.LiquidCrystalDisplay1.Elements._Item5.InputPin"
+                    }
+                  ]
+                },
+                {
+                  "Type": "ptSource",
+                  "SinkPins": [
+                    {
+                      "Name": "__OpenWireRootUnit__.LiquidCrystalDisplay1.Elements.IntegerField4.InputPin",
+                      "ID": "__OpenWireRootUnit__.LiquidCrystalDisplay1.Elements._Item6.InputPin"
+                    }
+                  ]
+                },
+                {
+                  "Type": "ptSource",
+                  "SinkPins": [
+                    {
+                      "Name": "__OpenWireRootUnit__.LiquidCrystalDisplay1.Elements.IntegerField5.InputPin",
+                      "ID": "__OpenWireRootUnit__.LiquidCrystalDisplay1.Elements._Item7.InputPin"
+                    }
+                  ]
+                },
+                {
+                  "Type": "ptSource"
+                },
+                {
+                  "Type": "ptSource"
+                }
+              ],
+              "Count": 8,
+              "Form": "__OpenWireRootUnit__"
+            },
+            "InputPin": {
+              "SourcePin": {
+                "ID": "__OpenWireRootUnit__.RealTimeClock1.OutputPin"
+              }
+            },
+            "+": "TArduinoDecodeDateTime"
+          },
+          "Type": "Component",
+          "Y": 464
+        },
+        {
+          "X": 480,
+          "Name": "Array1",
+          "Instance": {
+            "IndexInputPin": {
+              "SourcePin": {
+                "Name": "__OpenWireRootUnit__.DecodeDateTime1.OutputPins.Month",
+                "ID": "__OpenWireRootUnit__.DecodeDateTime1.OutputPins._Pin1"
+              }
+            },
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.LiquidCrystalDisplay1.Elements.TextField2.InputPin",
+                  "ID": "__OpenWireRootUnit__.LiquidCrystalDisplay1.Elements._Item2.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoTextValueArray",
+            "Elements": {
+              "*": [
+                {
+                  "+": "TArduinoTextValueElement"
+                },
+                {
+                  "Value": "Jan",
+                  "+": "TArduinoTextValueElement"
+                },
+                {
+                  "Value": "Feb",
+                  "+": "TArduinoTextValueElement"
+                },
+                {
+                  "Value": "Mar",
+                  "+": "TArduinoTextValueElement"
+                },
+                {
+                  "Value": "Apr",
+                  "+": "TArduinoTextValueElement"
+                },
+                {
+                  "Value": "May",
+                  "+": "TArduinoTextValueElement"
+                },
+                {
+                  "Value": "Jun",
+                  "+": "TArduinoTextValueElement"
+                },
+                {
+                  "Value": "Jul",
+                  "+": "TArduinoTextValueElement"
+                },
+                {
+                  "Value": "Aug",
+                  "+": "TArduinoTextValueElement"
+                },
+                {
+                  "Value": "Sep",
+                  "+": "TArduinoTextValueElement"
+                },
+                {
+                  "Value": "Oct",
+                  "+": "TArduinoTextValueElement"
+                },
+                {
+                  "Value": "Nov",
+                  "+": "TArduinoTextValueElement"
+                },
+                {
+                  "Value": "Dec",
+                  "+": "TArduinoTextValueElement"
+                }
+              ]
+            }
+          },
+          "Type": "Component",
+          "Y": 352
+        }
+      ]
+    }
+  ],
+  "Content": "OpenWire Diagram"
+}
